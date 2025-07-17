@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Game </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎲 Dice Game </h1>
+
+  <label for="player-count">Select Players:</label>
+  <select id="player-count" onchange="setupPlayers()">
+    <option value="1">1 Player vs Computer</option>
+    <option value="2">2 Players</option>
+    <option value="3">3 Players</option>
+    <option value="4" selected>4 Players</option>
+  </select>
+
+  <div class="dice-container" id="dice-container"></div>
+
+  <button id="roll-btn" onclick="rollForCurrentPlayer()">🎯 Roll for Player</button>
+  <div id="result">Select players and click Roll</div>
+
+  <audio id="dice-sound" preload="auto">
+    <source src="https://raw.githubusercontent.com/SaurabhKoturwar/public-assets/main/audio/dice-roll.mp3" type="audio/mpeg">
+  </audio>
+<script src="Script.js"></script>
+</body>
+</html>
